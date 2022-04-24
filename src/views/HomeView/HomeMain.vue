@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import SearchField from '@/components/SearchField/SearchField.vue'
-import SubmitButton from '@/components/SubmitButton.vue'
+import SubmitButton from '@/components/SubmitButton/SubmitButton.vue'
 
 import type { Suggestion } from '@/components/components.interface'
 
@@ -22,13 +22,15 @@ const suggestions: Suggestion[] = [
 
 <template>
   <main class="home-main">
-    <div class="home-main__logo-container">
-      <img class="home-main__logo" alt="Not Google Logo" src="logo.svg" />
-    </div>
-    <SearchField :suggestions="suggestions" icon="search" />
-    <div class="home-main__button-container">
-      <SubmitButton label="Google Search" />
-      <SubmitButton label="I'm Feeling Lucky" />
+    <div class="home-main__container">
+      <div class="home-main__logo-container">
+        <img class="home-main__logo" alt="Not Google Logo" src="logo.svg" />
+      </div>
+      <SearchField :suggestions="suggestions" icon="search" />
+      <div class="home-main__button-container">
+        <SubmitButton label="Google Search" variant="gray" />
+        <SubmitButton label="I'm Feeling Lucky" variant="gray" />
+      </div>
     </div>
   </main>
 </template>
@@ -37,10 +39,15 @@ const suggestions: Suggestion[] = [
 .home-main {
   text-align: center;
   max-width: 36rem;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   margin: auto;
+  width: 100%;
+  padding: 1rem;
+}
+
+.home-main__container {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
   width: 100%;
 }
@@ -54,6 +61,8 @@ const suggestions: Suggestion[] = [
 }
 
 .home-main__logo {
+  max-width: 17rem;
+  margin: auto;
   margin-bottom: 1.5rem;
 }
 

@@ -1,10 +1,12 @@
-<script setup>
+<script setup lang="ts">
 import { RouterLink } from 'vue-router'
 
-const props = defineProps({
-  name: String,
-  isSymbol: Boolean,
-})
+interface Props {
+  name?: string
+  isSymbol?: boolean
+}
+
+const props = defineProps<Props>()
 </script>
 
 <template>
@@ -26,8 +28,8 @@ const props = defineProps({
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 9999px;
 }
 

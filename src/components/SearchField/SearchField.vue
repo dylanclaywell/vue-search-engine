@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import SubmitButton from '@/components/SubmitButton.vue'
+import SubmitButton from '@/components/SubmitButton/SubmitButton.vue'
 import Suggestion from '@/components/SearchField/SearchSuggestion.vue'
 import type { SuggestionType } from '@/components/components.interface'
 
@@ -68,8 +68,8 @@ function onInputBlur() {
           <Suggestion :text="suggestion.text" :type="suggestion.type" />
         </div>
         <div class="search-field__dropdown-button-container">
-          <SubmitButton label="Google Search" />
-          <SubmitButton label="I'm Feeling Lucky" />
+          <SubmitButton label="Google Search" variant="gray" />
+          <SubmitButton label="I'm Feeling Lucky" variant="gray" />
         </div>
       </div>
     </div>
@@ -125,7 +125,7 @@ function onInputBlur() {
 
 .search-field__search-icon {
   padding-left: 0.75rem;
-  color: gray;
+  color: var(--gray-200);
   font-size: 1.25rem;
   user-select: none;
   display: flex;

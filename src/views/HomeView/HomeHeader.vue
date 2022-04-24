@@ -1,5 +1,10 @@
 <script setup lang="ts">
-import IconLink from '@/components/IconLink.vue'
+import { ref } from 'vue'
+
+import SubmitButton from '@/components/SubmitButton/SubmitButton.vue'
+import IconButton from '@/components/IconButton/IconButton.vue'
+
+const isLoggedIn = ref(false)
 </script>
 
 <template>
@@ -12,8 +17,16 @@ import IconLink from '@/components/IconLink.vue'
       <div class="home-header__link-container">
         <RouterLink class="home-header__link" to="/">Gmail</RouterLink>
         <RouterLink class="home-header__link" to="/">Images</RouterLink>
-        <IconLink name="apps" isSymbol />
-        <RouterLink class="home-header__link" to="/"></RouterLink>
+        <IconButton name="apps" isSymbol />
+        <IconButton v-if="isLoggedIn" class="home-header__link">
+          <div class="settings-icon">D</div>
+        </IconButton>
+        <SubmitButton
+          v-else
+          label="Sign in"
+          variant="blue"
+          class="home-header__sign-in-button"
+        />
       </div>
     </nav>
   </header>
@@ -38,5 +51,22 @@ import IconLink from '@/components/IconLink.vue'
 .home-header__link {
   margin: 0.75rem;
   font-size: 0.875rem;
+}
+
+.home-header__sign-in-button {
+  margin-left: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.settings-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--rounded-full);
+  background-color: lightskyblue;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
 }
 </style>

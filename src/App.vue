@@ -11,12 +11,14 @@ body {
   margin: 0;
 }
 
-#app {
-  font-family: arial;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 a {
@@ -26,6 +28,14 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+#app {
+  font-family: arial;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 
 .material-symbols-outlined {
@@ -39,11 +49,15 @@ a:hover {
   --rounded-full: 9999px;
 
   --purple: #609;
-  --blue: #1a0dab;
-  --light-blue: #1a73e8;
+  --blue-100: #1a0dab;
+  --blue-200: #1a73e8;
+  --blue-300: #2b7de9;
+  --blue-400: #5094ed;
   --border-gray: #dfe1e5;
-  --gray-100: #f8f9fa;
-  --gray-200: #ebebeb;
-  --gray-300: #656565;
+  --gray-100: #656565;
+  --gray-200: #9f9f9f;
+  --gray-300: #d6d6d6;
+  --gray-400: #ebebeb;
+  --gray-500: #f8f9fa;
 }
 </style>

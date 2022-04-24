@@ -36,7 +36,7 @@ const props = defineProps<Props>()
 }
 
 .suggestion:hover {
-  background-color: var(--gray-200);
+  background-color: var(--gray-300);
 }
 
 .suggestion__label {
@@ -64,6 +64,6 @@ const props = defineProps<Props>()
 
 .suggestion__remove-button:hover {
   text-decoration: underline;
-  color: var(--light-blue);
+  color: var(--blue-200);
 }
 </style>
