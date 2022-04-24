@@ -17,7 +17,7 @@
 
 <style scoped>
 .home-footer {
-  padding: 0.75rem 1rem;
+  padding: 0.25rem 1rem;
   background-color: var(--gray-400);
   display: flex;
   justify-content: space-between;
