@@ -3,6 +3,7 @@ import { ref } from 'vue'
 
 import SubmitButton from '@/components/SubmitButton/SubmitButton.vue'
 import IconButton from '@/components/IconButton/IconButton.vue'
+import AppMenu from '@/views/HomeView/AppMenu.vue'
 
 const isLoggedIn = ref(false)
 </script>
@@ -29,6 +30,7 @@ const isLoggedIn = ref(false)
         />
       </div>
     </nav>
+    <AppMenu />
   </header>
 </template>
 

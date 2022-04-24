@@ -36,7 +36,7 @@ const props = defineProps<Props>()
 }
 
 .suggestion:hover {
-  background-color: var(--gray-300);
+  background-color: var(--gray-400);
 }
 
 .suggestion__label {

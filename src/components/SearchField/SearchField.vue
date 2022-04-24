@@ -101,7 +101,7 @@ function onInputBlur() {
 
 .search-field__container:hover,
 .search-field__container--expanded {
-  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  box-shadow: var(--menu-shadow);
 }
 
 .search-field__control-container {

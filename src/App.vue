@@ -48,6 +48,8 @@ a:hover {
   --rounded-lg: 12px;
   --rounded-full: 9999px;
 
+  --menu-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+
   --purple: #609;
   --blue-100: #1a0dab;
   --blue-200: #1a73e8;
@@ -57,7 +59,7 @@ a:hover {
   --gray-100: #656565;
   --gray-200: #9f9f9f;
   --gray-300: #d6d6d6;
-  --gray-400: #ebebeb;
+  --gray-400: #f2f2f2;
   --gray-500: #f8f9fa;
 }
 </style>
