@@ -1,0 +1,32 @@
+<script setup lang="ts"></script>
+
+<template>
+  <footer class="home-footer">
+    <div>
+      <RouterLink class="home-footer__link" to="/">Advertising</RouterLink>
+      <RouterLink class="home-footer__link" to="/">Business</RouterLink>
+      <RouterLink class="home-footer__link" to="/">How Search Works</RouterLink>
+    </div>
+    <div>
+      <RouterLink class="home-footer__link" to="/">Privacy</RouterLink>
+      <RouterLink class="home-footer__link" to="/">Terms</RouterLink>
+      <RouterLink class="home-footer__link" to="/">Settings</RouterLink>
+    </div>
+  </footer>
+</template>
+
+<style scoped>
+.home-footer {
+  padding: 0.75rem 1rem;
+  background-color: var(--gray-200);
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.home-footer__link {
+  color: var(--gray-300);
+  font-size: 0.87rem;
+  padding: 1rem;
+}
+</style>
