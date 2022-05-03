@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { RouterLink } from 'vue-router'
 
 import SubmitButton from '@/components/SubmitButton/SubmitButton.vue'
 import IconButton from '@/components/IconButton/IconButton.vue'

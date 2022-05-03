@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import SubmitButton from '@/components/SubmitButton/SubmitButton.vue'
 import Suggestion from '@/components/SearchField/SearchSuggestion.vue'
-import type { SuggestionType } from '@/components/components.interface'
+import type { Suggestion as SuggestionType } from '@/components/components.interface'
 
 const props = defineProps<{ icon: string; suggestions: SuggestionType[] }>()
 
